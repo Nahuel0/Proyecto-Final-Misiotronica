@@ -1,0 +1,85 @@
+.cont-producto{
+    border: 2px solid black; 
+    width: 30%;
+ 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: rgb(240, 217, 187);
+}
+
+
+.img-venta{
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 24px;
+    align-self: center; 
+    
+}
+.content-precio-compra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+}
+.boton-comprar{
+    border-radius: 10px;
+    background-color: rgb(216, 50, 50);
+    width: 40%;
+    height: 50px;
+    border: none;
+    list-style: none;
+    transition: .5s;
+    font-size: 20px;
+    font-weight:1000;
+    color: white;
+}
+.precio-producto{
+    font-size: 20px;
+}
+
+.boton-comprar:hover{
+    background-color: wheat;
+    scale: 1.05;
+    border: 1px solid black;
+    color: black;
+}
+
+
+@media (max-width: 1200px) {
+    .cont-producto{width: 45%;}
+}
+
+@media (max-width: 860px){
+    
+    .content-precio-compra{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    .boton-comprar{
+        width: 100%;
+    }
+}
+
+@media (max-width: 680px){
+    .content-precio-compra{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 10px;
+
+    }
+    .cont-producto{
+        width: 80%;
+    }
+    .boton-comprar{
+        font-size: 15px;
+        width: 45%;
+    }
+}

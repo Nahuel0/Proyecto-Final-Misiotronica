@@ -1,0 +1,32 @@
+.content-acerca{
+    margin: 100px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: rgb(228, 165, 189);
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-acerca{
+    font-size: 50px;
+    
+}
+
+.descripcion{
+    font-weight: 600;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+@media (max-width: 599px){
+    .content-acerca{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 30px;
+    }
+    .titulo-acerca, .descripcion{
+        font-size: large;
+    }
+}

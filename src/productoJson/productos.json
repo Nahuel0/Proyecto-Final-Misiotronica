@@ -1,0 +1,164 @@
+[
+    {
+        "id": "leds" ,
+        "nombre" : "Luces Leds",
+        "tipo":[
+            {
+                "id":"led1",
+                "precio": 12312,
+                "nombre":"Luces Led 2m adhesivo",
+                "url": "imagenes-venta/Luces-Sensores/leds/led1.png"
+            },{
+                "id":"led2",
+                "precio": 22300,
+                "nombre":"Luces de Neon estetico",
+                "url": "imagenes-venta/Luces-Sensores/leds/led2.png"
+            }
+        ]
+    },
+    {
+        "id": "leds-emergencia" ,
+        "nombre" : "Luces De Emergencia",
+        "tipo":[
+            {
+                "id":"luz-emergencia",
+                "precio": 1550,
+                "nombre":"Luz de Emergencia colo Blanco 2wh",
+                "url": "imagenes-venta/Luces-Sensores/leds-emergencia/luz-emergencia.png"
+            }
+        ]
+    },
+    {
+        "id": "sensor-de-estacionamiento" ,
+        "nombre" : "Sensores de Estacionamiento",
+        "tipo":[
+            {
+                "id":"sensor1",
+                "precio": 30000,
+                "nombre":"Sensor de auto marac Lefer",
+                "url": "imagenes-venta/Luces-Sensores/sensor-de-estacionamiento/sensor1.png"
+            },{
+                "id":"sensor2",
+                "precio": 19999,
+                "nombre":"Sensor Automovil marca Patito",
+                "url": "imagenes-venta/Luces-Sensores/sensor-de-estacionamiento/sensor2.png"
+            },{
+                "id":"sensor3",
+                "precio": 11999,
+                "nombre":"Automovil-sensor Lefer 2.0",
+                "url": "imagenes-venta/Luces-Sensores/sensor-de-estacionamiento/sensor3.png"
+            }
+        ]
+    },
+    {
+        "id": "sensor-de-movimiento" ,
+        "nombre" : "Sensores de Movimiento",
+
+        "tipo":[
+            {
+                "id":"sensor1",
+                "precio": 9999,
+                "nombre":"Sensor Moviento White 20mts",
+                "url": "imagenes-venta/Luces-Sensores/sensor-de-movimiento/sensor1.png"
+        
+            },{
+                "id":"sensor2",
+                "precio": 20000,
+                "nombre":"Sensor movimiento marca MoviMant 30Mts",
+                "url": "imagenes-venta/Luces-Sensores/sensor-de-movimiento/sensor2.png"
+        
+            },{
+                "id":"sensor3",
+                "precio": 10000,
+                "nombre":"Senso/Movimiento Black 20mts",
+                "url": "imagenes-venta/Luces-Sensores/sensor-de-movimiento/sensor3.png"
+    
+            }
+        ]
+    },{
+        "id": "placa-circuitos" ,
+        "nombre" : "Placa de Circuitos",
+        "tipo":[
+            {
+                "id":"placa1",
+                "precio": 2000,
+                "nombre":"Placa Lisa Para Circuiteria maraca Noxus",
+                "url": "imagenes-venta/placa/Placa-Circuitos/placa1.png"
+            },{
+                "id":"placa2",
+                "precio": 2400,
+                "nombre":"Placa de control principal Uncode",
+                "url": "imagenes-venta/placa/Placa-Circuitos/placa2.png"
+            },{
+                "id":"placa3",
+                "precio": 5000,
+                "nombre":"Placa de control 2Bits True/False",
+                "url": "imagenes-venta/placa/Placa-Circuitos/placa3.png"
+            }
+        ]
+    },{
+        "id": "Baterias" ,
+        "nombre" : "Placa de Control",
+        "tipo":[
+            {
+                "id":"bateria1",
+                "precio": 100000,
+                "nombre":"Bateria Dell notebook ",
+                "url": "imagenes-venta/placa/Placa-de-control/bateria1.png"
+            },{
+                "id":"placa2",
+                "precio": 70000,
+                "nombre":"Bateria Impresora 3D Noxus",
+                "url": "imagenes-venta/placa/Placa-de-control/bateria2.png"
+            },{
+                "id":"placa3",
+                "precio": 150000,
+                "nombre":"Bateria HP notebook 2023",
+                "url": "imagenes-venta/placa/Placa-de-control/bateria3.png"
+            }
+        ]
+    },{
+        "id": "placa-motherboard" ,
+        "nombre" : "Placa Motherboard",
+        "tipo":[
+            {
+                "id":"placa1",
+                "precio": 50000,
+                "nombre":"Placa madre PC Marca Gigabyte",
+                "url": "imagenes-venta/placa/Placa-Motherboard/placa1.png"
+            },{
+                "id":"placa2",
+                "precio": 60000,
+                "nombre": "MotherBoard Pc Gaming Alien",
+                "url": "imagenes-venta/placa/Placa-Motherboard/placa2.png"
+            },{
+                "id":"placa3",
+                "precio": 30000,
+                "nombre" : "Placa Madre Pc Asus Prime PCGamer",
+                "url": "imagenes-venta/placa/Placa-Motherboard/placa3.png"
+            }
+        ]
+    },{
+        "id": "Cables" ,
+        "nombre" : "Cables Varios",
+        "tipo":[
+            {
+                "id":"CableAux",
+                "precio": "2000",
+                "nombre":"Cable Auxiliar 3.3m",
+                "url":"imagenes-venta/cables/cable1.png"
+            },{
+                "id":"CableAdaptador",
+                "precio": "3500",
+                "nombre":"Cable Adaptador Auxiliar 2.5",
+                "url":"imagenes-venta/cables/cable2.png"
+            },{
+                "id":"CableCanal",
+                "precio":"1000",
+                "nombre":"Cable Canal 1m autoadhesivo",
+                "url":"imagenes-venta/cables/cable3.png"
+            }
+        ]
+
+    }
+]

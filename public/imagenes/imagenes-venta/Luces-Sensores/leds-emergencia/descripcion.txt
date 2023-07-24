@@ -1,0 +1,15 @@
+Marca	Sica
+Modelo	971142
+Color	Blanco
+Voltaje	220V
+Tipo de luz: LED
+Cantidad de luces LED: 60
+Flujo luminoso mínimo: 120 lm
+Flujo luminoso máximo: 240 lm
+Cantidad de faros: 1
+Autonomía mínima de horas: 4 h
+Autonomía máxima de horas: 8 h
+Tiempo de carga de la batería: 3 h
+Incluye batería recargable: Sí
+Tipos de alimentación: 220V
+Con Wi-Fi: No

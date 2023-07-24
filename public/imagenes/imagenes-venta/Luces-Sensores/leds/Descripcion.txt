@@ -1,0 +1,24 @@
+Marca	RGB
+Modelo	50/50
+Tipo de LED	5050
+Voltaje	220V
+Largo	5 m
+Grado de protección	IP64
+
+Cantidad de LEDs por metro: 30
+Incluye fuente de alimentación: Sí
+Incluye controlador de color: Sí
+Con Wi-Fi: No
+
+ESPECIFICACIONES:
+• Tira de led SMD 5050 RGB Multicolor con efectos de luces.
+• Adapta tu tira de led para utilizarlo en el lugar que desees.
+• Se puede realizar un corte como mínimo cada 5cm o 10 cm. Tene en cuenta que cada corte o va unido a la tira o necesita una nueva controladora y fuente para funcionar.
+• Permite realizar una fácil y rápida colocación.
+• Gran variedad de colores, con efectos de luz controlados directamente desde el control remoto.
+• Se pueden realizar secuencias de encendido y variación de colores, logrando así una iluminación única y original.
+• Estas tiras de led son ideales para ambientar bares, restaurants, discos y locales en general.
+• Apta para exteriores, resistente al agua con certificado IP65.
+• Ultra delgadas 3mm de alto y 8mm de ancho - Ángulo de apertura 120º.
+• Largo de 4,50 aprox metros más cable conforman los 5 metros.
+• 30 led por metro.

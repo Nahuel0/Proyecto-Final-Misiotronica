@@ -1,38 +1,22 @@
 .App {
   text-align: center;
+  background-color: rgb(240, 222, 229);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2,h3,h4{
+  font-family: 'Tektur', cursive;
 }
+p{font-family: 'Kanit', sans-serif;}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.seccion-venta{
+  display: flex; 
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.div-venta{
+  display: flex;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

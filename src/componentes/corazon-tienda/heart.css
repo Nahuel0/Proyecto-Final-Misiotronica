@@ -1,0 +1,13 @@
+.cont-heart{
+    display: flex;
+    justify-content: flex-end;
+    padding-right:28px ;
+}
+
+.heart{
+    padding-top: 20px;
+    color: red;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,16 @@
+Marca	ASRock
+Línea	OEM
+Modelo	B360M
+Versión	1.0
+Color	Negro
+
+Plataforma: Intel
+Capacidad máxima soportada de la memoria RAM: 64 GB
+Chipsets: Intel B360
+Socket: Lga 1151 (300 series)
+Ranuras de expansión: Pci express 3.0 x16 2 x pcie 3.0 x16 (16/4) pci express x1 2 x pcie 3.0 x1
+Con procesador: No
+CPU: Admite procesadores intel core de octava y novena generación * no es compatible con versiones anteriores de cpu lga 1151 de generación anterior
+Aplicaciones: PC
+Tipo de memoria RAM: DDR4
+Factor de forma: Micro ATX

@@ -1,0 +1,30 @@
+
+
+.imagen-icon{
+    width: 80px;
+    height: 50px;
+    padding-right: 10px;
+    align-self: center;
+}
+
+.cont-icon{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+.cont-mostrador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-logo-mostrador{
+    width: 60%;
+}
+
+@media (max-width: 850px){
+    .h3-logo{
+        display: none;
+    }
+}

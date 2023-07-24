@@ -1,0 +1,11 @@
+Marca	Lefer
+Modelo	XD-068
+Número de pieza	099
+Tipo de vehículo: Auto/Camioneta
+Con pantalla digital: Sí
+Con cámara: No
+Con buzzer: Sí
+
+¡Estacioná rápidamente de manera segura controlando el espacio detrás de tu vehículo con nuestros sensores traseros!
+
+Estos dispositivos cuentan con una tecnología de ultrasonidos que detectan la distancia respecto de otros vehículos u objetos, para facilitar al conductor el estacionado de su vehículo. Esto ocurre mediante un pitido y una alerta visual en el display, que avisan del peligro de seguir en esa dirección.

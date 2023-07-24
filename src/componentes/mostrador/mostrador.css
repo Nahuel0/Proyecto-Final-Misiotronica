@@ -1,0 +1,131 @@
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.botton-left,.botton-rigth{
+    width: 10px;
+    height: 10px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    transition: .5s
+    
+}
+button:hover{
+    scale: 1.1;
+}
+.botton-left:hover, .botton-rigth:hover{
+    filter: invert(100%);
+}
+
+.mostrar{
+    display: none;
+
+}
+
+.presentacion{
+    width: 90%;
+    height: 90%;
+    transition: all 1000ms ease-out;
+    
+}
+
+.ocultar{
+    display: contents;
+}
+
+
+.content-main{
+    background-color: beige;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px;
+   
+    
+}
+
+.content-mainimg{
+    background-image: url("../../../public/imagenes/otros/descuentos.jpg") ;
+    /* background-size: cover; */
+    background-repeat: round;
+}
+.navegation-a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.cont-titulo-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-img{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width:600px;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 24px;
+    margin: 20px;
+    background-color: rgba(250, 235, 215, 0.692);
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.712);
+
+}
+
+.mover{
+    height: 60px;
+    width: 60px;
+    align-self: center;
+
+}
+
+
+
+/* ======================= MEDIA QUERY ========================== */
+
+@media (max-width: 1000px){
+    .content-main{
+        height: 900px;
+    }
+    .content-img{
+        order: 1;
+        width: 85%;
+    }
+
+   .botton-left{
+    order: 2;
+    width: 45%;
+    background-color: transparent;
+    border: none;
+    
+    align-self: auto;
+
+    } 
+   .botton-rigth{
+    order: 3;
+    width: 45%;
+    background-color: transparent;
+    border: none;
+    
+    align-self: auto;
+}
+}
+@media (max-width: 550px){
+    .content-main{
+        height: 600px;
+    }
+
+    .content-img{
+        width: 100%;
+        height: 70%;
+    }
+}

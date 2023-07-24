@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import FlechaArriba from "./componentes/flecha-up/FlechaArriba";
+import Navegation from "./componentes/barra-nav/Navegation";
+import Informacion from "./componentes/informacion-contacto/Informacion";
+import {createBrowserRouter,RouterProvider, } from "react-router-dom"; 
+import routes from "./Routes";
+import "./App.css"
 
+const router = createBrowserRouter(routes);
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    return (
+    <div className="App" >
+      <Navegation />
+      <FlechaArriba/>
+      <RouterProvider router={router}/>
+      
     </div>
   );
 }

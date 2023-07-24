@@ -1,0 +1,27 @@
+.new{
+    
+    font-size: 20px;
+    align-self: flex-end;
+    background-color: red;
+    color: yellow;
+    width: 20%;
+    height: 70px;
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    box-shadow:  10px 5px 8px 0px  rgba(240, 226, 27, 0.76);
+    margin-bottom: 10px;
+
+    animation: float 1s linear infinite alternate;
+}
+
+@media (max-width: 400px) {
+    .new{
+        width: 30%;
+    }
+}
+
+@keyframes float{
+    to{
+      scale: 1.05;  
+    }
+}

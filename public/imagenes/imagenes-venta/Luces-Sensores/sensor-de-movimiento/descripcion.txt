@@ -1,0 +1,7 @@
+Marca	Ledvance
+Modelo	7015816
+Línea	Ledvance
+
+Tipo de dispositivo: Sensor
+Tipos de sensores: Movimiento
+Con Wi-Fi: No

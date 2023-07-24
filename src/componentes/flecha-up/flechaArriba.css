@@ -1,0 +1,26 @@
+.mostrar-flecha{
+    position: fixed;
+}
+
+.ocultar-flecha{
+    display: none;
+}
+
+#ir-arriba{
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+    border-radius: 50%;
+	transition: all .5s;
+}
+
+#ir-arriba:hover{
+	scale: 1.1;
+}
+
+#ir-arriba>img{
+	height: 40px;
+	width: 40px;
+}

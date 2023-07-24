@@ -1,0 +1,14 @@
+#cont-not-found{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240, 222, 229);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ir-a-principal{
+    text-decoration: none;
+    color: black;
+}
