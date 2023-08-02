@@ -37,13 +37,13 @@ export default function Informacion(){
 
                     <div className="content-link">
                         <h3>Links</h3>
-                            <a href="#inicio" className={position ? "link" : "position-inerith"}>Inicio</a>
+                            <a href="http://localhost:3000/" className={position ? "link" : "position-inerith"}>Inicio</a>
                         <br />
-                            <a href="#acercaDe" className={position ? "link" : "position-inerith"}>Acerca De</a>
+                            <a href="http://localhost:3000/descripcion" className={position ? "link" : "position-inerith"}>Acerca De</a>
                         <br />
-                            <a href="#ventas" className= {position ? "link" : "position-inerith"}>Ventas</a>
+                            <a href="http://localhost:3000/tienda" className= {position ? "link" : "position-inerith"}>Ventas</a>
                         <br />
-                            <a href="#contacto" className={position ? "link" : "position-inerith"}>Contacto</a>
+                            <a href="http://localhost:3000/contacto" className={position ? "link" : "position-inerith"}>Contacto</a>
                     </div>
                 </div>
             </div>

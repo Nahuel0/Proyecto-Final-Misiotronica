@@ -13,7 +13,10 @@
 
     animation: float 1s linear infinite alternate;
 }
-
+.text{
+    font-family: 'Tektur', cursive;
+    font-size: 18px;
+}
 @media (max-width: 400px) {
     .new{
         width: 30%;

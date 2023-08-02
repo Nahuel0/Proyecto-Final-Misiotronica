@@ -2,8 +2,14 @@ import Producto from "../productos/Producto";
 import dataImagen from "../../productoJson/productos.json"
 import "./contentProductos.css"
 import { useEffect, useState } from "react";
-export default function ContentProducto(){  
+import Carrito from "../carrito/Carrito";
 
+//Definimos el slice
+
+
+
+export default function ContentProducto(){  
+ 
     const [expandir,setExpandir] = useState(false);
 
     
@@ -46,11 +52,24 @@ export default function ContentProducto(){
         },[])
 
     //================================================
+
+    //================== Opciones del carrito =================================
+    const [contenidoCarrito,setContenidoCarrito] = useState([]);
+    const p = [];
+    const addCarrito= (producto)=>{
+        p.push(producto);
+        console.log(p)
+    }
+
+    useEffect(()=>{
+
+    },[])
+
     return(
         <section className="section-cont-producto">
-            
-            {/* Ancla */}
-            <a name="ventas"    style={{visibility:"hidden"}}></a>
+            {/* Carrito */}
+            <Carrito/>
+
 
             <h2>Algunos de nuestros Productos</h2>
             {/* Boton de expandir todos los productos */}
@@ -61,13 +80,20 @@ export default function ContentProducto(){
             <div className={!expandir ?"cont-parcial-productos" : "ocultar-producto"}>
                 {resultado.map(
                     (producto)=>
-                        <Producto 
-                            key = {producto.id}
-                            nombre={producto.tipo[0].nombre}
-                            url={producto.tipo[0].url}
-                            precio={producto.tipo[0].precio}
-                            class="img-ventas"
-                        />
+                        <div className="cont-producto">
+                                <Producto 
+                                    key = {producto.id}
+                                    nombre={producto.tipo[0].nombre}
+                                    url={producto.tipo[0].url}
+                                    class="img-ventas"
+                                />
+                            
+                            <div className="content-precio-compra">
+                                <p className="precio-producto">$ {producto.tipo[0].precio}</p>   
+                                <button className="boton-comprar" onClick={addCarrito(producto.tipo[0])}>Comprar</button>
+                            </div> 
+                        </div>
+                        
                     
                 )}
             </div>
@@ -75,20 +101,25 @@ export default function ContentProducto(){
             <div className={expandir ? "cont-total-producto" :"ocultar-producto"}>
                     {
                         resultado.map(
-                            (producto) =>
-                                    
-                                    producto.tipo.map(
-                                        
-                                        (unidad,index)=>
-                                            <Producto
-                                            key={unidad.id}
-                                            nombre={unidad.nombre}
-                                            url={unidad.url}
-                                            precio={unidad.precio}
-                                            class="img-ventas-all"
-                                            />
-                                        
-                                    )
+                            (producto) =>(
+                                        producto.tipo.map(
+                                            (unidad)=> 
+                                                <div className="cont-producto"> 
+                                                    <Producto
+                                                        key={unidad.id}
+                                                        nombre={unidad.nombre}
+                                                        url={unidad.url}
+                                                        precio={unidad.precio}
+                                                        class="img-ventas-all"
+                                                    />
+                                                     <div className="content-precio-compra">
+                                                        <p className="precio-producto">$ {unidad.precio}</p>   
+                                                        <button className="boton-comprar" onClick={()=>{alert('Producto agregado al carro')}}>Comprar</button>
+                                                    </div>   
+                                                </div>
+                                            
+                                        )
+                            )
                             
                         )
                     }

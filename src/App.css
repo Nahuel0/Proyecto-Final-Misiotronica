@@ -4,8 +4,11 @@
 }
 h2,h3,h4{
   font-family: 'Tektur', cursive;
+  font-size: 30px;
 }
 p{font-family: 'Kanit', sans-serif;}
+
+
 
 
 .seccion-venta{
@@ -20,3 +23,12 @@ p{font-family: 'Kanit', sans-serif;}
 }
 
 
+@media only screen and (max-width : 1500px) {
+  h2 {
+    font-size: 50px;
+  } 
+
+  a{
+    font-size: 10px;
+  }
+}

@@ -56,10 +56,10 @@ export default function Nav(){
             {!urlCorrect ? 
             <nav className={menu  ? "nav-content-fixed" : "nav-content" } >
                 <ul className={`flex-grow nav-ul ${menu ? "isActive" : "" }`}>
-                    <li><a onClick={checkMenu} href="#inicio" className='li-nav'>Inicio</a></li>
-                    <li><a onClick={checkMenu} href="#acercaDe" className='li-nav'>Acerca De</a></li>
-                    <li><a onClick={checkMenu} href="#ventas" className='li-nav'>Ventas</a></li>
-                    <li><a onClick={checkMenu} href="#contacto" className='li-nav'>Contacto</a></li>
+                    <li><a onClick={checkMenu} href="http://localhost:3000/" className='li-nav'>Inicio</a></li>
+                    <li><a onClick={checkMenu} href="http://localhost:3000/descripcion" className='li-nav'>Acerca De</a></li>
+                    <li><a onClick={checkMenu} href="http://localhost:3000/tienda" className='li-nav'>Ventas</a></li>
+                    <li><a onClick={checkMenu} href="http://localhost:3000/contacto" className='li-nav'>Contacto</a></li>
                 </ul>
             </nav>
              :  <div></div>

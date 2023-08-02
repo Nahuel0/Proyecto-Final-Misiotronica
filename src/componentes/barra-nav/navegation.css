@@ -12,7 +12,7 @@ li{
     transition: all 1s ;
 }
 .cont-transparente{
-    background-color:rgba(245, 142, 182, 0.795);
+    background-color:rgba(245, 142, 182, 0.411);
     position: fixed;
     width: 100%;
     top: 0;
@@ -46,8 +46,8 @@ li{
 .li-nav{
     position: relative;
     background: none;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 650;
     color: var(--color-secondary);
     padding: 12px 0;
     margin-bottom: -2px;

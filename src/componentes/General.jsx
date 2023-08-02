@@ -8,12 +8,8 @@ import Informacion from "./informacion-contacto/Informacion";
 export default function General (){
     return(
         <div>
-            <a name="inicio"></a>
-            
             <Mostrador/>
             <ContentProducto/>
-            {/* Ancla */}
-            <a name="acercaDe"></a>
             <Descripcion/>
             <Informacion />
         </div>
