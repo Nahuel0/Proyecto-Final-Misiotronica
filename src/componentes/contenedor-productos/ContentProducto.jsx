@@ -101,26 +101,32 @@ export default function ContentProducto(){
             <div className={expandir ? "cont-total-producto" :"ocultar-producto"}>
                     {
                         resultado.map(
-                            (producto) =>(
-                                        producto.tipo.map(
-                                            (unidad)=> 
-                                                <div className="cont-producto"> 
-                                                    <Producto
-                                                        key={unidad.id}
-                                                        nombre={unidad.nombre}
-                                                        url={unidad.url}
-                                                        precio={unidad.precio}
-                                                        class="img-ventas-all"
-                                                    />
-                                                     <div className="content-precio-compra">
-                                                        <p className="precio-producto">$ {unidad.precio}</p>   
-                                                        <button className="boton-comprar" onClick={()=>{alert('Producto agregado al carro')}}>Comprar</button>
-                                                    </div>   
-                                                </div>
-                                            
-                                        )
-                            )
-                            
+                            (producto) =>
+                                        <div className="cont-producto-seleccionados">
+                                            <h4 className="titulo-producto-seleccionado">{producto.nombre}</h4>   
+                                            <div className="cont-producto-row"> 
+                                            {
+                                                producto.tipo.map(
+                                                    (unidad)=> 
+                                                        <div className="cont-producto">
+                                                                <Producto
+                                                                    key={unidad.id}
+                                                                    nombre={unidad.nombre}
+                                                                    url={unidad.url}
+                                                                    precio={unidad.precio}
+                                                                    class="img-ventas-all"
+                                                                />
+                                                            
+                                                                <div className="content-precio-compra">
+                                                                    <p className="precio-producto">$ {unidad.precio}</p>   
+                                                                    <button className="boton-comprar" onClick={()=>{alert('Producto agregado al carro')}}>Comprar</button>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                )
+                                            }
+                                            </div>
+                                        </div>
                         )
                     }
             </div>
