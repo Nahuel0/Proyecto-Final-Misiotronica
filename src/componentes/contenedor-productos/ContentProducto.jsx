@@ -58,7 +58,6 @@ export default function ContentProducto(){
     const p = [];
     const addCarrito= (producto)=>{
         p.push(producto);
-        console.log(p)
     }
 
     useEffect(()=>{
@@ -80,11 +79,12 @@ export default function ContentProducto(){
             <div className={!expandir ?"cont-parcial-productos" : "ocultar-producto"}>
                 {resultado.map(
                     (producto)=>
-                        <div className="cont-producto">
+                        <div className="cont-producto" key={producto.id}>
                                 <Producto 
                                     key = {producto.id}
                                     nombre={producto.tipo[0].nombre}
                                     url={producto.tipo[0].url}
+                                    cantidad = {producto.tipo[0].cantidad}
                                     class="img-ventas"
                                 />
                             
@@ -102,18 +102,19 @@ export default function ContentProducto(){
                     {
                         resultado.map(
                             (producto) =>
-                                        <div className="cont-producto-seleccionados">
+                                        <div key={producto.id} className="cont-producto-seleccionados">
                                             <h4 className="titulo-producto-seleccionado">{producto.nombre}</h4>   
                                             <div className="cont-producto-row"> 
                                             {
                                                 producto.tipo.map(
                                                     (unidad)=> 
-                                                        <div className="cont-producto">
+                                                        <div className="cont-producto" key={unidad.id}>
                                                                 <Producto
                                                                     key={unidad.id}
                                                                     nombre={unidad.nombre}
                                                                     url={unidad.url}
                                                                     precio={unidad.precio}
+                                                                    cantidad = {producto.tipo[0].cantidad}
                                                                     class="img-ventas-all"
                                                                 />
                                                             

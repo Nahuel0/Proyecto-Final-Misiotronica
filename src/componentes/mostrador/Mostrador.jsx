@@ -44,14 +44,16 @@ export default function Mostrador(){
             
             <button onClick={antImagen} className="botton-left"><img className="mover" src={process.env.PUBLIC_URL +"/imagenes/icon/flecha-izquierda.png"} alt="Mover a Izquierda" /></button>
                 {listImagen.map(
+                    
                     (img,index)=>{
+                        
                         esValido = false
                         return(
 
                                 //Pregunto si la imagen es la que tiene que mostrar, la muestro, y las demas las escondo
                                 imagenActual===index ? (
                                 esValido = true,
-                                <div className="cont-titulo-img">
+                                <div key="div" className="cont-titulo-img">
                                     <h2>Proximante Nuevo En! </h2>    
                                     <div className={"content-img"+ ` ${esValido ? 'mostrar' : 'ocultar'}`}  >
                                         <New/>
