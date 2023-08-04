@@ -4,14 +4,14 @@
         "nombre" : "Luces Leds",
         "tipo":[
             {
-                "id":"led1",
+                "id":1,
                 "precio": 12312,
                 "nombre":"Luces Led 2m adhesivo",
                 "cantidad":10,
                 "descripcion":"",
                 "url": "imagenes-venta/Luces-Sensores/leds/led1.png"
             },{
-                "id":"led2",
+                "id":2,
                 "precio": 22300,
                 "nombre":"Luces de Neon estetico",
                 "cantidad":10,
@@ -25,7 +25,7 @@
         "nombre" : "Luces De Emergencia",
         "tipo":[
             {
-                "id":"luz-emergencia",
+                "id":3,
                 "precio": 1550,
                 "nombre":"Luz de Emergencia colo Blanco 2wh",
                 "cantidad":10,
@@ -39,21 +39,21 @@
         "nombre" : "Sensores de Estacionamiento",
         "tipo":[
             {
-                "id":"sensor1",
+                "id":4,
                 "precio": 30000,
                 "nombre":"Sensor de auto marac Lefer",
                 "cantidad":10,
                 "descripcion":"",
                 "url": "imagenes-venta/Luces-Sensores/sensor-de-estacionamiento/sensor1.png"
             },{
-                "id":"sensor2",
+                "id":5,
                 "precio": 19999,
                 "nombre":"Sensor Automovil marca Patito",
                 "cantidad":10,
                 "descripcion":"",
                 "url": "imagenes-venta/Luces-Sensores/sensor-de-estacionamiento/sensor2.png"
             },{
-                "id":"sensor3",
+                "id":6,
                 "precio": 11999,
                 "nombre":"Automovil-sensor Lefer 2.0",
                 "cantidad":10,
@@ -68,7 +68,7 @@
 
         "tipo":[
             {
-                "id":"sensor1",
+                "id":7,
                 "precio": 9999,
                 "nombre":"Sensor Moviento White 20mts",
                 "cantidad":10,
@@ -76,7 +76,7 @@
                 "url": "imagenes-venta/Luces-Sensores/sensor-de-movimiento/sensor1.png"
         
             },{
-                "id":"sensor2",
+                "id":8,
                 "precio": 20000,
                 "nombre":"Sensor movimiento marca MoviMant 30Mts",
                 "cantidad":10,
@@ -84,7 +84,7 @@
                 "url": "imagenes-venta/Luces-Sensores/sensor-de-movimiento/sensor2.png"
         
             },{
-                "id":"sensor3",
+                "id":9,
                 "precio": 10000,
                 "nombre":"Senso/Movimiento Black 20mts",
                 "cantidad":10,
@@ -98,21 +98,21 @@
         "nombre" : "Placa de Circuitos",
         "tipo":[
             {
-                "id":"placa1",
+                "id":10,
                 "precio": 2000,
                 "nombre":"Placa Lisa Para Circuiteria maraca Noxus",
                 "cantidad":10,
                 "descripcion":"",
                 "url": "imagenes-venta/placa/Placa-Circuitos/placa1.png"
             },{
-                "id":"placa2",
+                "id":11,
                 "precio": 2400,
                 "nombre":"Placa de control principal Uncode",
                 "cantidad":10,
                 "descripcion":"",
                 "url": "imagenes-venta/placa/Placa-Circuitos/placa2.png"
             },{
-                "id":"placa3",
+                "id":12,
                 "precio": 5000,
                 "nombre":"Placa de control 2Bits True/False",
                 "cantidad":10,
@@ -125,21 +125,21 @@
         "nombre" : "Placa de Control",
         "tipo":[
             {
-                "id":"bateria1",
+                "id":13,
                 "precio": 100000,
                 "nombre":"Bateria Dell notebook ",
                 "cantidad":10,
                 "descripcion":"",
                 "url": "imagenes-venta/placa/Placa-de-control/bateria1.png"
             },{
-                "id":"placa2",
+                "id":14,
                 "precio": 70000,
                 "nombre":"Bateria Impresora 3D Noxus",
                 "cantidad":10,
                 "descripcion":"",
                 "url": "imagenes-venta/placa/Placa-de-control/bateria2.png"
             },{
-                "id":"placa3",
+                "id":15,
                 "precio": 150000,
                 "nombre":"Bateria HP notebook 2023",
                 "cantidad":10,
@@ -152,21 +152,21 @@
         "nombre" : "Placa Motherboard",
         "tipo":[
             {
-                "id":"placa1",
+                "id":16,
                 "precio": 50000,
                 "nombre":"Placa madre PC Marca Gigabyte",
                 "cantidad":10,
                 "descripcion":"",
                 "url": "imagenes-venta/placa/Placa-Motherboard/placa1.png"
             },{
-                "id":"placa2",
+                "id":17,
                 "precio": 60000,
                 "nombre": "MotherBoard Pc Gaming Alien",
                 "cantidad":10,
                 "descripcion":"",
                 "url": "imagenes-venta/placa/Placa-Motherboard/placa2.png"
             },{
-                "id":"placa3",
+                "id":18,
                 "precio": 30000,
                 "nombre" : "Placa Madre Pc Asus Prime PCGamer",
                 "cantidad":10,
@@ -179,21 +179,21 @@
         "nombre" : "Cables Varios",
         "tipo":[
             {
-                "id":"CableAux",
+                "id":19,
                 "precio": "2000",
                 "nombre":"Cable Auxiliar 3.3m",
                 "cantidad":10,
                 "descripcion":"",
                 "url":"imagenes-venta/cables/cable1.png"
             },{
-                "id":"CableAdaptador",
+                "id":20,
                 "precio": "3500",
                 "nombre":"Cable Adaptador Auxiliar 2.5",
                 "cantidad":10,
                 "descripcion":"",
                 "url":"imagenes-venta/cables/cable2.png"
             },{
-                "id":"CableCanal",
+                "id":21,
                 "precio":"1000",
                 "nombre":"Cable Canal 1m autoadhesivo",
                 "cantidad":10,

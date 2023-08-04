@@ -4,12 +4,28 @@ import "./contentProductos.css"
 import { useEffect, useState } from "react";
 import Carrito from "../carrito/Carrito";
 
-//Definimos el slice
 
 
 
 export default function ContentProducto(){  
- 
+    //================= Creamos los prodcutos y los asignamos a una lista =======================
+    let productosCreados = [];
+    dataImagen.map(
+        (productos)=>productos.tipo.map(
+            (unidad)=>productosCreados.push(
+                <Producto 
+                    key = {unidad.id}
+                    nombre={unidad.nombre}
+                    url={unidad.url}
+                    cantidad = {unidad.cantidad}
+                    class="img-ventas"
+                />
+            )
+        ),    
+    )
+    let iterador = 0;
+    
+    //================================================================
     const [expandir,setExpandir] = useState(false);
 
     
@@ -22,6 +38,7 @@ export default function ContentProducto(){
         //Hokss
         const [productos,setProductos ] = useState([]);
         const [search,setSearch] = useState("");
+     
 
         //Funcion para traer los datos
         const showData =  ()=>{
@@ -56,18 +73,23 @@ export default function ContentProducto(){
     //================== Opciones del carrito =================================
     const [contenidoCarrito,setContenidoCarrito] = useState([]);
     const p = [];
-    const addCarrito= (producto)=>{
-        p.push(producto);
+    const addCarrito= (id)=>{
+        p.push(productosCreados[id]);
+        setContenidoCarrito(contenidoCarrito.concat(p));
+        
     }
 
     useEffect(()=>{
 
     },[])
 
+    //================================================
     return(
         <section className="section-cont-producto">
             {/* Carrito */}
-            <Carrito/>
+            <Carrito
+                productos = {contenidoCarrito}
+            />
 
 
             <h2>Algunos de nuestros Productos</h2>
@@ -78,19 +100,19 @@ export default function ContentProducto(){
 
             <div className={!expandir ?"cont-parcial-productos" : "ocultar-producto"}>
                 {resultado.map(
-                    (producto)=>
+                    (producto,i)=>
                         <div className="cont-producto" key={producto.id}>
-                                <Producto 
+                                {/* <Producto 
                                     key = {producto.id}
                                     nombre={producto.tipo[0].nombre}
                                     url={producto.tipo[0].url}
                                     cantidad = {producto.tipo[0].cantidad}
                                     class="img-ventas"
-                                />
-                            
+                                /> */}
+                                {productosCreados[i]}
                             <div className="content-precio-compra">
                                 <p className="precio-producto">$ {producto.tipo[0].precio}</p>   
-                                <button className="boton-comprar" onClick={addCarrito(producto.tipo[0])}>Comprar</button>
+                                <button className="boton-comprar"  onClick={()=>{addCarrito(iterador)}}>Comprar</button>
                             </div> 
                         </div>
                         
@@ -101,29 +123,32 @@ export default function ContentProducto(){
             <div className={expandir ? "cont-total-producto" :"ocultar-producto"}>
                     {
                         resultado.map(
-                            (producto) =>
+                            (producto,i) =>
                                         <div key={producto.id} className="cont-producto-seleccionados">
                                             <h4 className="titulo-producto-seleccionado">{producto.nombre}</h4>   
                                             <div className="cont-producto-row"> 
                                             {
                                                 producto.tipo.map(
-                                                    (unidad)=> 
+                                                    (unidad)=>( 
                                                         <div className="cont-producto" key={unidad.id}>
-                                                                <Producto
+                                                                {/* <Producto
                                                                     key={unidad.id}
                                                                     nombre={unidad.nombre}
                                                                     url={unidad.url}
                                                                     precio={unidad.precio}
                                                                     cantidad = {producto.tipo[0].cantidad}
                                                                     class="img-ventas-all"
-                                                                />
-                                                            
+                                                                /> */}
+                                                                {productosCreados[iterador++]}
+                                                                
                                                                 <div className="content-precio-compra">
                                                                     <p className="precio-producto">$ {unidad.precio}</p>   
-                                                                    <button className="boton-comprar" onClick={()=>{alert('Producto agregado al carro')}}>Comprar</button>
+                                                                    <button className="boton-comprar" onClick={()=>{addCarrito(unidad.id)}}>Comprar</button>
                                                                 
                                                             </div>
                                                         </div>
+                                                        
+                                                        )
                                                 )
                                             }
                                             </div>
