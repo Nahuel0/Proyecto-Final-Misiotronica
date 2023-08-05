@@ -75,7 +75,7 @@ export default function ContentProducto(){
     const p = [];
     const addCarrito= (id)=>{
         alert("Producto agregado al carrito");
-        p.push(productosCreados[id]);
+        p.push(productosCreados[id-1]);
         setContenidoCarrito(contenidoCarrito.concat(p));
         
     }
@@ -106,7 +106,7 @@ export default function ContentProducto(){
                                 {productosCreados[i]}
                             <div className="content-precio-compra">
                                 <p className="precio-producto">$ {producto.tipo[0].precio}</p>   
-                                <button className="boton-comprar"  onClick={()=>{addCarrito(producto.tipo[0].id)}}>Comprar</button>
+                                <button className="boton-comprar"  onClick={()=>addCarrito(i+1)}>Comprar</button>
                             </div> 
                         </div>
                         
