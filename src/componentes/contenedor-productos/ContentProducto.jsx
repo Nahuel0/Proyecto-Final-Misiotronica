@@ -74,6 +74,7 @@ export default function ContentProducto(){
     const [contenidoCarrito,setContenidoCarrito] = useState([]);
     const p = [];
     const addCarrito= (id)=>{
+        alert("Producto agregado al carrito");
         p.push(productosCreados[id]);
         setContenidoCarrito(contenidoCarrito.concat(p));
         
@@ -102,17 +103,10 @@ export default function ContentProducto(){
                 {resultado.map(
                     (producto,i)=>
                         <div className="cont-producto" key={producto.id}>
-                                {/* <Producto 
-                                    key = {producto.id}
-                                    nombre={producto.tipo[0].nombre}
-                                    url={producto.tipo[0].url}
-                                    cantidad = {producto.tipo[0].cantidad}
-                                    class="img-ventas"
-                                /> */}
                                 {productosCreados[i]}
                             <div className="content-precio-compra">
                                 <p className="precio-producto">$ {producto.tipo[0].precio}</p>   
-                                <button className="boton-comprar"  onClick={()=>{addCarrito(iterador)}}>Comprar</button>
+                                <button className="boton-comprar"  onClick={()=>{addCarrito(producto.tipo[0].id)}}>Comprar</button>
                             </div> 
                         </div>
                         
@@ -131,14 +125,7 @@ export default function ContentProducto(){
                                                 producto.tipo.map(
                                                     (unidad)=>( 
                                                         <div className="cont-producto" key={unidad.id}>
-                                                                {/* <Producto
-                                                                    key={unidad.id}
-                                                                    nombre={unidad.nombre}
-                                                                    url={unidad.url}
-                                                                    precio={unidad.precio}
-                                                                    cantidad = {producto.tipo[0].cantidad}
-                                                                    class="img-ventas-all"
-                                                                /> */}
+                                                                
                                                                 {productosCreados[iterador++]}
                                                                 
                                                                 <div className="content-precio-compra">

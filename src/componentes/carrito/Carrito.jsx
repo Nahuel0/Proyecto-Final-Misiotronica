@@ -10,10 +10,29 @@ export default function Carrito(props){
     const viewCarrito = ()=>{
         setVerCarrito(!verCarrito)
     }
+    
+    
+    
+    
+    //======================Body==========================================
+   
+    //Se le agrega una clase al body para no poder hacer scroll
+    let seagregoScroll = false;
+    
+    let body = document.getElementsByTagName('body')[0];
+    
+    if(verCarrito && !seagregoScroll){ 
+        body.className=" scroll" 
+        seagregoScroll = true
+    }
+    else{
+        body.className = "";
+    }
+
     return (
         <div className='content-carrito'>
             
-            <div className=  {!verCarrito ? "ocultar-carrito" : "mostrar-carrito"}>
+            <div className=  {!verCarrito ? "ocultar-carrito" : "mostrar-carrito scroll"}>
                 <button className='boton-cerrar' onClick={()=>{viewCarrito()}}>X</button>
                 <div className='cont-carrito-productos'>
                     {   
@@ -25,8 +44,13 @@ export default function Carrito(props){
                                 </div> 
                         : 
                             props.productos.map(
-                                (producto)=>producto
-                                )
+                                    (producto)=>
+                                        <div className='unidad-producto-view'>
+                                            {producto}
+                                        </div>
+                                    )
+                                
+                            
                     }
                 </div>
             </div>
