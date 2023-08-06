@@ -3,8 +3,11 @@ import Imagen from "../imagenes/Imagen"
 import "./producto.css"
 import Heart from "../corazon-tienda/Heart";
 let stock =0;
+let precio = 0;
+
 export default function Producto(props) {
     stock = props.cantidad;
+    precio = props.precio;
     return(
         <div className="producto">
                 <Heart/>
@@ -21,3 +24,8 @@ export default function Producto(props) {
         </div>
     );
 }
+
+function getPrecio(){
+    return precio;
+}
+

@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-import Producto from '../productos/Producto';
 import './carrito.css'
-import { act } from 'react-dom/test-utils';
 
 
 
@@ -21,8 +19,6 @@ export default function Carrito(props){
         if(indexProductosEliminados.length>-1){
             
             pdtos = pdtos.filter((d,i) => !indexProductosEliminados.find((c)=> (c==i)), [] );
-            console.log(pdtos)
-            console.log(indexProductosEliminados)
             setTodosProductos(pdtos);
         }else{
             setTodosProductos(pdtos);
@@ -30,7 +26,19 @@ export default function Carrito(props){
     }
     
     
-    
+    let precio = 0;
+    const totalPrecio = ()=>{
+        
+       // ================================================= VER COMO SE HACE =================================================
+        todosProductos.map(
+            (p)=> precio += p.getPrecio
+        ); 
+        console.log(precio);
+        return precio;
+    }
+
+
+
     
     //======================Body==========================================
    
@@ -67,15 +75,18 @@ export default function Carrito(props){
     return (
         <div className='content-carrito'>
             
-            <button className={!verCarrito ? "boton-carrito" : "ocultar-carrito"} onClick={()=>{viewCarrito();actualizarCarrito();}}>
-                <img src={process.env.PUBLIC_URL+"/imagenes/icon/carrito-compras.png"} alt="Carrito de compras" id='img-carrito'/>
-            </button>
+               
+                <button className={!verCarrito ? "boton-carrito" : "ocultar-carrito"} onClick={()=>{viewCarrito();actualizarCarrito();}}>
+                    <img src={process.env.PUBLIC_URL+"/imagenes/icon/carrito-compras.png"} alt="Carrito de compras" id='img-carrito'/>
+                </button>
             
             <div className=  {!verCarrito ? "ocultar-carrito" : "mostrar-carrito scroll"}>
-                <button className='boton-cerrar' onClick={()=>{viewCarrito()}}>
-                    <img className='cerrar-carrito-img' src={process.env.PUBLIC_URL+"/imagenes/icon/boton-eliminar.png"} alt='cerrar el carrito de compras'/>
-                </button>
-
+                <div className='cont-close-precio'>
+                    <p>Precio : {totalPrecio()}</p>
+                    <button className='boton-cerrar' onClick={()=>{viewCarrito()}}>
+                        <img className='cerrar-carrito-img' src={process.env.PUBLIC_URL+"/imagenes/icon/boton-eliminar.png"} alt='cerrar el carrito de compras'/>
+                    </button>
+                </div>
                 <div className='cont-carrito-productos'>
                     {   
                         !todosProductos.length ? 
@@ -91,14 +102,19 @@ export default function Carrito(props){
                                             <div className='unidad-producto-view'>
                                                 {producto}
                                             </div>
-                                            <button className='boton-eliminar-del-carrito' onClick={()=>eliminarProductoCarrito(i)}>Eliminar</button>
+                                            <button className='boton-eliminar-del-carrito' onClick={()=>eliminarProductoCarrito(i)}>
+                                               <p>Eliminar < br/> Producto</p>
+                                            </button>
                                         </div>  
                                     )
                             )
                                 
                             
                     }
+
                 </div>
+                <button className={!todosProductos.length ? "ocultar-boton-finalizar" : "boton-finalizar-compra"}>Finalizar Compra</button>
+                
             </div>
             
         </div>
