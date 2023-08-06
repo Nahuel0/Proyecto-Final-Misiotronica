@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import swal from 'sweetalert';
 import './carrito.css'
 
 
@@ -71,6 +72,15 @@ export default function Carrito(props){
         
     }
 
+    const finalizarCompra = ()=>{
+        swal({
+            title: 'Compra Realizada!',
+            text: "Gracias por su compra! vuelvas prontos",
+            icon: 'success'
+        });
+        setTodosProductos([]);
+    }
+
 
     return (
         <div className='content-carrito'>
@@ -82,7 +92,7 @@ export default function Carrito(props){
             
             <div className=  {!verCarrito ? "ocultar-carrito" : "mostrar-carrito scroll"}>
                 <div className='cont-close-precio'>
-                    <p>Precio : {totalPrecio()}</p>
+                    <p>{!todosProductos.length ? '' : `Precio : ${totalPrecio()}` }</p>
                     <button className='boton-cerrar' onClick={()=>{viewCarrito()}}>
                         <img className='cerrar-carrito-img' src={process.env.PUBLIC_URL+"/imagenes/icon/boton-eliminar.png"} alt='cerrar el carrito de compras'/>
                     </button>
@@ -91,6 +101,10 @@ export default function Carrito(props){
                     {   
                         !todosProductos.length ? 
                             <div className='cont-empty'>
+                                <img 
+                                    className='carrito-vacio'
+                                    src={process.env.PUBLIC_URL+"/imagenes/icon/carro-vacio.png"} 
+                                    alt="carrito esta vacio" />
                                 <h4>Carrito Vacio!</h4>
                                 
                                 <a className='a-url-tienda' href="http://localhost:3000/tienda">Compra Aqui!</a>
@@ -113,7 +127,12 @@ export default function Carrito(props){
                     }
 
                 </div>
-                <button className={!todosProductos.length ? "ocultar-boton-finalizar" : "boton-finalizar-compra"}>Finalizar Compra</button>
+                <button 
+                    className={!todosProductos.length ? "ocultar-boton-finalizar" : "boton-finalizar-compra"}
+                    onClick={()=>{finalizarCompra()}}
+                >
+                        Finalizar Compra
+                </button>
                 
             </div>
             

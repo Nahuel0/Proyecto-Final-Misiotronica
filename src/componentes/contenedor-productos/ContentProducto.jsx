@@ -1,6 +1,7 @@
 import Producto from "../productos/Producto";
 import dataImagen from "../../productoJson/productos.json"
 import "./contentProductos.css"
+import swal from 'sweetalert';
 import { useEffect, useState } from "react";
 import Carrito from "../carrito/Carrito";
 
@@ -74,7 +75,7 @@ export default function ContentProducto(){
     const [contenidoCarrito,setContenidoCarrito] = useState([]);
     const p = [];
     const addCarrito= (id)=>{
-        alert("Producto agregado al carrito");
+        swal("Producto agregado al carrito!",'','success');
         p.push(productosCreados[id-1]);
         setContenidoCarrito(contenidoCarrito.concat(p));
         

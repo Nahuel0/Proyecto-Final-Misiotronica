@@ -25,7 +25,5 @@ export default function Producto(props) {
     );
 }
 
-function getPrecio(){
-    return precio;
-}
+
 

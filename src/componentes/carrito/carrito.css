@@ -89,6 +89,10 @@
     margin: 20px;
 }
 
+.carrito-vacio{
+    width: 20%;
+    height: 50%;
+}
 .cont-empty{
     width: 100%;
     display: flex;
