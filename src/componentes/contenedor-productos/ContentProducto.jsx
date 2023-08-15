@@ -81,69 +81,123 @@ export default function ContentProducto(){
         
     }
 
-    useEffect(()=>{
-
-    },[])
+    
 
     //================================================
-    return(
-        <section className="section-cont-producto">
-            {/* Carrito */}
-            <Carrito
-                productos = {contenidoCarrito}
-            />
 
 
-            <h2>Algunos de nuestros Productos</h2>
-            {/* Boton de expandir todos los productos */}
-            <button name="ventas" className="boton-mostrar-todo" onClick={expandirTodo}>{!expandir?"Ver Todo":"Ocultar"}</button>
-            {/* Input para buscar automatico */}
-            <input value={search} onChange={searcher} type="text" placeholder="Buscar Productos" className="search"/>
+    //===================== URL TEST ================
+    const [url,setUrl]=useState(window.location.href)
+    
+    
+    useEffect(
+        ()=>{
+            setUrl(window.location.href);
+        }
+    ,[])
+    //==================================================
+    
 
-            <div className={!expandir ?"cont-parcial-productos" : "ocultar-producto"}>
-                {resultado.map(
-                    (producto,i)=>
-                        <div className="cont-producto" key={producto.id}>
-                                {productosCreados[i]}
-                            <div className="content-precio-compra">
-                                <p className="precio-producto">$ {producto.tipo[0].precio}</p>   
-                                <button className="boton-comprar"  onClick={()=>addCarrito(i+1)}>Comprar</button>
-                            </div> 
-                        </div>
-                        
-                    
-                )}
-            </div>
-
-            <div className={expandir ? "cont-total-producto" :"ocultar-producto"}>
-                    {
-                        resultado.map(
-                            (producto,i) =>
-                                        <div key={producto.id} className="cont-producto-seleccionados">
-                                            <h4 className="titulo-producto-seleccionado">{producto.nombre}</h4>   
-                                            <div className="cont-producto-row"> 
-                                            {
-                                                producto.tipo.map(
-                                                    (unidad)=>( 
-                                                        <div className="cont-producto" key={unidad.id}>
-                                                                
-                                                                {productosCreados[iterador++]}
-                                                                
-                                                                <div className="content-precio-compra">
-                                                                    <p className="precio-producto">$ {unidad.precio}</p>   
-                                                                    <button className="boton-comprar" onClick={()=>{addCarrito(unidad.id)}}>Comprar</button>
-                                                                
+    //Pregunta si la url es tienda, entonces manda el catalogo completo, sino manda un desplegable
+    if(url.includes('tienda')){
+        return(
+            <section className="section-cont-producto">
+                <Carrito
+                    productos = {contenidoCarrito}
+                />
+                <div className="cont-total-producto">
+                        {
+                            resultado.map(
+                                (producto,i) =>
+                                            <div key={producto.id} className="cont-producto-seleccionados">
+                                                <h4 className="titulo-producto-seleccionado">{producto.nombre}</h4>   
+                                                <div className="cont-producto-row"> 
+                                                {
+                                                    producto.tipo.map(
+                                                        (unidad)=>( 
+                                                            <div className="cont-producto" key={unidad.id}>
+                                                                    
+                                                                    {productosCreados[iterador++]}
+                                                                    
+                                                                    <div className="content-precio-compra">
+                                                                        <p className="precio-producto">$ {unidad.precio}</p>   
+                                                                        <button className="boton-comprar" onClick={()=>{addCarrito(unidad.id)}}>Comprar</button>
+                                                                    
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        
-                                                        )
-                                                )
-                                            }
+                                                            
+                                                            )
+                                                    )
+                                                }
+                                                </div>
                                             </div>
-                                        </div>
-                        )
-                    }
-            </div>
-        </section>
-    )
+                            )
+                        }
+                </div>
+            </section>
+        )
+    }else{
+        return(
+            <section className="section-cont-producto">
+                {/* Carrito */}
+                <Carrito
+                    productos = {contenidoCarrito}
+                />
+
+
+                <h2>Algunos de nuestros Productos</h2>
+                {/* Boton de expandir todos los productos */}
+                <button name="ventas" className="boton-mostrar-todo" onClick={expandirTodo}>{!expandir?"Ver Todo":"Ocultar"}</button>
+                {/* Input para buscar automatico */}
+                <input value={search} onChange={searcher} type="text" placeholder="Buscar Productos" className="search"/>
+
+                <div className={!expandir ?"cont-parcial-productos" : "ocultar-producto"}>
+                    <div className="row-parcial-productos">
+                    {resultado.map(
+                        (producto,i)=>
+                            <div className="cont-producto" key={producto.id}>
+                                    {productosCreados[i]}
+                                <div className="content-precio-compra">
+                                    <p className="precio-producto">$ {producto.tipo[0].precio}</p>   
+                                    <button className="boton-comprar"  onClick={()=>addCarrito(i+1)}>Comprar</button>
+                                </div> 
+                            </div>
+                            
+                        
+                    )}
+                    </div>
+                </div>
+
+                <div className={expandir ? "cont-total-producto" :"ocultar-producto"}>
+                        {
+                            resultado.map(
+                                (producto,i) =>
+                                            <div key={producto.id} className="cont-producto-seleccionados">
+                                                <h4 className="titulo-producto-seleccionado">{producto.nombre}</h4>   
+                                                <div className="cont-producto-row"> 
+                                                {
+                                                    producto.tipo.map(
+                                                        (unidad)=>( 
+                                                            <div className="cont-producto" key={unidad.id}>
+                                                                    
+                                                                    {productosCreados[iterador++]}
+                                                                    
+                                                                    <div className="content-precio-compra">
+                                                                        <p className="precio-producto">$ {unidad.precio}</p>   
+                                                                        <button className="boton-comprar" onClick={()=>{addCarrito(unidad.id)}}>Comprar</button>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            )
+                                                    )
+                                                }
+                                                </div>
+                                            </div>
+                            )
+                        }
+                </div>
+            </section>
+        )
+    }
 }

@@ -131,7 +131,7 @@ li{
         justify-content: center;
         align-items: center;
         background-color: rgba(18, 85, 112, 0.986);
-        transition: all 1000ms ease-out;
+        transition: all 300ms ease-out;
     } 
 
     .nav-img{
@@ -158,7 +158,7 @@ li{
         justify-content: center;
         align-items: center;
         background-color: rgba(38, 115, 145, 0.877);
-        transition: all 1000ms ease-out;
+        transition: all 300ms ease-out;
         
     } 
     

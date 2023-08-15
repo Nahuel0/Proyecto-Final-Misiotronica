@@ -27,16 +27,7 @@ export default function Carrito(props){
     }
     
     
-    let precio = 0;
-    const totalPrecio = ()=>{
-        
-       // ================================================= VER COMO SE HACE =================================================
-        todosProductos.map(
-            (p)=> precio += p.getPrecio
-        ); 
-        console.log(precio);
-        return precio;
-    }
+    
 
 
 
@@ -92,7 +83,6 @@ export default function Carrito(props){
             
             <div className=  {!verCarrito ? "ocultar-carrito" : "mostrar-carrito scroll"}>
                 <div className='cont-close-precio'>
-                    <p>{!todosProductos.length ? '' : `Precio : ${totalPrecio()}` }</p>
                     <button className='boton-cerrar' onClick={()=>{viewCarrito()}}>
                         <img className='cerrar-carrito-img' src={process.env.PUBLIC_URL+"/imagenes/icon/boton-eliminar.png"} alt='cerrar el carrito de compras'/>
                     </button>
